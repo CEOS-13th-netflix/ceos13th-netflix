@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
-  
+  --font-sans: 'Pretendard', ui-sans-serif, system-ui, sans-serif;
+
   --text-heading1: 1.5rem;
   --text-heading1--line-height: 1.35;
   --text-heading1--font-weight: 600;
@@ -28,7 +28,7 @@
   --text-label1--font-weight: 600;
   --text-label1--letter-spacing: -0.02em;
 
-  --text-label2: 0.9375rem;;
+  --text-label2: 0.9375rem;
   --text-label2--line-height: 1.35;
   --text-label2--font-weight: 400;
   --text-label2--letter-spacing: -0.02em;
@@ -45,10 +45,29 @@
 
   /* color */
   --color-black: #000000;
-  --color-white: #FFFFFF;
-  --background-image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.00) 87%, #000 100%);
+  --color-white: #ffffff;
+  --background-image-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0) 87%,
+    #000 100%
+  );
   --color-gray-900: #121212;
   --color-gray-800: #424242;
-  --color-gray-700: #8C8787;
-  --color-gray-600: #C4C4C4;
+  --color-gray-700: #8c8787;
+  --color-gray-600: #c4c4c4;
+}
+
+/* 스크롤바 숨기기 유틸리티 */
+@utility scrollbar-hide {
+  /* Chrome, Safari, Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE, Edge */
+  -ms-overflow-style: none;
 }
