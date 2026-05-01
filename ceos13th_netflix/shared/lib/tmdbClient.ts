@@ -1,3 +1,4 @@
+// TMDB API 호출, TMDB 요청을 공통으로 처리하는 파일
 const BASE_URL = 'https://api.themoviedb.org/3';
 const ACCESS_TOKEN = process.env.MOVIE_ACCESS_TOKEN;
 
@@ -5,7 +6,11 @@ export interface FetchOptions extends RequestInit {
   params?: Record<string, string>;
 }
 
-export async function tmdbFetch<T>(endpoint: string, options: FetchOptions = {}): Promise<T> {
+
+export async function tmdbFetch<T>(
+  endpoint: string,
+  options: FetchOptions = {}
+): Promise<T> {
   if (!ACCESS_TOKEN) {
     throw new Error('MOVIE_ACCESS_TOKEN이 설정되지 않았습니다.');
   }
@@ -30,3 +35,4 @@ export async function tmdbFetch<T>(endpoint: string, options: FetchOptions = {})
 
   return response.json();
 }
+
