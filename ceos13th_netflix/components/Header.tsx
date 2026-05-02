@@ -1,13 +1,18 @@
-import Image from "next/image";
-import icon_netflix from '@/public/icon_netflix.svg';
+import Image from 'next/image';
 
 export default function Header() {
-    return (
-        <header className="flex items-center justify-start w-full h-15 gap-6">
-            <Image src={icon_netflix} alt="netfilx icon" width={56} height={56} className="" />
-            <a className="text-white text-body1">TV Shows</a>
-            <a className="text-white text-body1">Movies</a>
-            <a className="text-white text-body1">My List</a>
-        </header>
-    )
+  return (
+    <header className="flex items-center justify-start w-full h-15 gap-6">
+      <Image
+        src="/icon_netflix.svg"
+        alt="netfilx icon"
+        width={56}
+        height={56}
+        className=""
+      />
+      <a className="text-white text-body1">TV Shows</a>
+      <a className="text-white text-body1">Movies</a>
+      <a className="text-white text-body1">My List</a>
+    </header>
+  );
 }

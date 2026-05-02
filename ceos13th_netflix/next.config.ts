@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'image.tmdb.org' }
     ],
   },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
 };
 
 export default nextConfig;
