@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import NavBar from '@/components/Navbar';
 import HeroCarousel from '@/feature/movies/MovieHero';
 import PreviewSection from '@/feature/movies/PreviewSection';
 import ContinueWatchingSection from '@/feature/movies/ContinueWatchingSection';
@@ -20,6 +21,8 @@ export default async function Home() {
         <PreviewSection movies={nowPlayingData.results} />
         <ContinueWatchingSection movies={popularData.results} />
       </div>
+
+      <NavBar />
     </div>
   );
 }
