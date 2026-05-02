@@ -10,7 +10,7 @@ import HamburgerIcon from '@/assets/icon_hamburger.svg';
 const navItems = [
   {
     label: 'Home',
-    path: '/',
+    path: '/home',
     icon: HomeIcon,
   },
   {
